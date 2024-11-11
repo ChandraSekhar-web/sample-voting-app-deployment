@@ -1,41 +1,36 @@
-#This is a sample answer yaml file for the KKE Devops task deploy-voting app on k8s 
-#Edit the below codes as per your question details.
-#Check this blog https://thirigiri.blogspot.com for kubenetes commands, how to deply this file and how to complete the task.
-#I have done a smilir task on my own envrinment check above blog for more details.
-
 apiVersion: apps/v1                                                               
 kind: Deployment                                                                  
-metadata:                                                                         
-  creationTimestamp: null                                                         
-  labels:                                                                         
-    app: db-deployment                                                            
-  name: db-deployment                                                         
-  namespace: vote                                                                 
-spec:                                                                             
-  replicas: 1                                                                     
-  selector:                                                                       
-    matchLabels:                                                                  
-      app: db-deployment                                                          
-  strategy: {}                                                                    
-  template:                                                                       
-    metadata:                                                                     
-      creationTimestamp: null                                                     
-      labels:                                                                     
-        app: db-deployment                                                        
-    spec:                                                                         
-      containers:                                                                 
-      - image: postgres:9.4                                                       
-        name: postgres                                                            
-        env:                                                                      
-        - name: POSTGRES_USER                                                     
-          value: postgres                                                         
-        - name: POSTGRES_PASSWORD                                                 
-          value: postgres                                                         
-        - name: POSTGRES_HOST_AUTH_METHOD                                         
-          value: trust                                                            
-        volumeMounts:                                                             
-        - name: db-data                                                           
-          mountPaths: /var/lib/postgresql/data                                    
-      volumes:                                                                    
-      - name: db-data                                                             
-        emptyDir: {}  
+metadata:
+  creationTimestamp: null
+  labels:
+    app: db-deployment
+  name: db-deployment
+  namespace: vote
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: db-deployment
+    spec:
+      containers:
+      - image: postgres:9.4
+        name: postgres
+        env:
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          value: postgres
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: trust
+        volumeMounts:
+        - name: db-data
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: db-data
+        emptyDir: {}
