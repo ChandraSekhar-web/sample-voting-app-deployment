@@ -9,7 +9,7 @@ metadata:
   creationTimestamp: null                                                         
   labels:                                                                         
     app: db-deployment                                                            
-  name: db-deployment                                                             
+  name: db-deployment                                                         
   namespace: vote                                                                 
 spec:                                                                             
   replicas: 1                                                                     
