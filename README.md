@@ -1,7 +1,3 @@
-# sample-voting-app-deployment on k8s
-This is a sample answer for the kke devops task- deploy a voting app on k8s
-you need to edit the codes as per your question details.
-Check this blog https://thirigiri.blogspot.com for kubenetes commands, how to deply these files and complete the task.
+Deployment of Voting Application on GCP using Kubernetes
 
-
-
+Deploying a Voting App on Google Cloud Platform (GCP) using Kubernetes and a microservices architecture. This deployment provided hands-on experience with container orchestration and scalability in a real-world application, transforming the voting experience by enhancing accessibility and real-time data processing, allowing users to vote securely from anywhere with internet access.
