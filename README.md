@@ -56,7 +56,7 @@ kubectl create ns vote
      ```
    - After defining the deployment configuration, run the file with:
      ```bash
-     kubectl apply -f db-deployment.yml
+     kubectl apply -f db-deployment.yml -n vote
      ```
 2. Similarly, for the service resource:
    - Use the following command to create the db-service.yml file by referring the  
@@ -66,7 +66,7 @@ kubectl create ns vote
      ```
    - After defining the service configuration, run the file with:
      ```bash
-     kubectl apply -f db-service.yml
+     kubectl apply -f db-service.yml -n vote
      ```
 
 ## Creating Redis
@@ -84,7 +84,7 @@ kubectl create ns vote
      ```
    - After defining the deployment configuration, run the file with:
      ```bash
-     kubectl apply -f redis-deployment.yml
+     kubectl apply -f redis-deployment.yml -n vote
      ```
 2.  Similarly, for the service resource:
     - Use the following command to create the redis-service.yml file by referring the   
@@ -94,7 +94,7 @@ kubectl create ns vote
       ```
     - After defining the service configuration, run the file with:
       ```bash
-      kubectl apply -f redis-service.yml
+      kubectl apply -f redis-service.yml -n vote
       ```
 
 ## Creating Result Microservice:
@@ -113,7 +113,7 @@ kubectl create ns vote
      ```
    - After defining the deployment configuration, run the file with:
      ```bash
-     kubectl apply -f result-deployment.yml
+     kubectl apply -f result-deployment.yml -n vote
      ```
 2. Similarly, for the service resource:
    - Use the following command to create the result-service.yml file by referring the repository:
@@ -122,7 +122,7 @@ kubectl create ns vote
      ```
    - After defining the service configuration, run the file with:
      ```bash
-     kubectl apply -f result-service.yml
+     kubectl apply -f result-service.yml -n vote
      ```
 
 ## Creating vote microservice
@@ -141,7 +141,7 @@ kubectl create ns vote
      ```
    - After defining the deployment configuration, run the file with:
      ```bash
-     kubectl apply -f vote-deployment.yml
+     kubectl apply -f vote-deployment.yml -n vote
      ```
 2. Similarly, for the service resource:
    - Use the following command to create the vote-service.yml file by referring the repository:
@@ -150,7 +150,7 @@ kubectl create ns vote
      ```
    - After defining the service configuration, run the file with:
      ```bash
-     kubectl apply -f vote-service.yml
+     kubectl apply -f vote-service.yml -n vote
      ```
 
 ## Creating the worker microservice:
@@ -168,7 +168,7 @@ kubectl create ns vote
      ```
    - After defining the deployment configuration, run the file with:
      ```bash
-     kubectl apply -f worker-deployment.yml
+     kubectl apply -f worker-deployment.yml -n vote
      ```
 
 ## Debugging the voting application:
